@@ -1,0 +1,13 @@
+{
+  "name": "roman-roads",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "yoonhoGo",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.263.1"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.6"
+  }
+}
