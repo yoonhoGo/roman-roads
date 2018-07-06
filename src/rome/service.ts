@@ -2,7 +2,6 @@ export default class Service implements Schema {
   alias?: string
   name: string
   provider: Provider
-  region?: string
 
   constructor(schema: Schema) {
     if (!schema.name) {
@@ -12,11 +11,12 @@ export default class Service implements Schema {
     }
     
     this.name = schema.name
+    this.alias = schema.alias
     this.provider = schema.provider
-    this.region = schema.region
   }
 
-  call(action: string, context: any) {
-    return this.provider.invoke(name)
+  run(action: string, context: any) {
+    const order = { action, context }
+    return this.provider.invoke(order)
   }
 }

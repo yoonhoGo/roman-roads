@@ -1,8 +1,8 @@
 interface Schema {
-  actions: {
+  actions?: {
     [name: string]: Function
   }
-  mutations: {
+  mutations?: {
     [name: string]: Function
   }
 }

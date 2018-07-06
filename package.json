@@ -1,13 +1,24 @@
 {
   "name": "roman-roads",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "1.0.2",
   "author": "yoonhoGo",
   "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepublishOnly": "tsc"
+  },
+  "typescript": {
+    "definition": "dist/index.d.ts"
+  },
   "dependencies": {
     "aws-sdk": "^2.263.1"
   },
   "devDependencies": {
     "@types/node": "^10.3.6"
-  }
+  },
+  "keywords": [
+    "microservice",
+    "aws",
+    "serverless"
+  ]
 }

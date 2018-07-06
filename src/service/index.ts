@@ -1,6 +1,4 @@
-import _ from 'lodash'
-
-export class Service {
+export default class Service {
   constructor(private schema: Schema) {}
   start(order: OrderSheet) {
     return this.invoke(order.action, order.context)

@@ -1,4 +1,4 @@
-type Provider = AWS.Lambda
+type Provider = AWS.Lambda | any
 
 interface Schema {
   alias?: string
