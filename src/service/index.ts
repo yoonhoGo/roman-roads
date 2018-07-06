@@ -1,3 +1,16 @@
+interface Schema {
+  actions?: {
+    [name: string]: Function
+  }
+  mutations?: {
+    [name: string]: Function
+  }
+}
+
+interface OrderSheet {
+  action: string
+  context: any
+}
 export default class Service {
   constructor(private schema: Schema) {}
   start(order: OrderSheet) {
@@ -5,9 +18,11 @@ export default class Service {
   }
   invoke(actionName: string, context: any) {
     // _.invoke(this.schema, actionName, ...context)
-    if ('function' == typeof this.schema[actionName]) {
+    if (this.schema.actions === undefined) return
+    
+    if ('function' == typeof this.schema.actions[actionName]) {
       // noFunc() 사용
-      const func = this.schema[actionName]
+      const func = this.schema.actions[actionName]
       func(...context)
     } else {
       // 뭔가 다른 것 수행

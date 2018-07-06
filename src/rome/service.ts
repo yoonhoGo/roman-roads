@@ -1,3 +1,14 @@
+import AWS from 'aws-sdk'
+type Provider = AWS.Lambda | any
+
+interface Schema {
+  alias?: string
+  name: string
+  provider: Provider
+  region?: string
+  [name: string]: any
+}
+
 export default class Service implements Schema {
   alias?: string
   name: string
