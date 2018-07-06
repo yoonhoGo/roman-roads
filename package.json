@@ -14,7 +14,8 @@
     "aws-sdk": "^2.263.1"
   },
   "devDependencies": {
-    "@types/node": "^10.3.6"
+    "@types/node": "^10.3.6",
+    "typescript": "^2.9.2"
   },
   "keywords": [
     "microservice",
