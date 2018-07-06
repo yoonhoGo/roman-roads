@@ -16,7 +16,7 @@ export default class Service {
   start(order: OrderSheet) {
     return this.invoke(order.action, order.context)
   }
-  invoke(actionName: string, context: any) {
+  private invoke(actionName: string, context: any) {
     // _.invoke(this.schema, actionName, ...context)
     if (this.schema.actions === undefined) return
     

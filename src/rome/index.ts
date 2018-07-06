@@ -12,7 +12,7 @@ class Rome {
     this.services[name] = service
   }
 
-  async run(name: string, context: any) {
+  async run(name: string, context?: any) {
     const [service, action] = name.split('.', 1)
     return this.services[service].run(action, context)
   }

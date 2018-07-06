@@ -3,7 +3,7 @@ import * as AWS from 'aws-sdk'
 export default class Lambda {
   private lambda: AWS.Lambda
 
-  constructor(public functionName: string, options: AWS.Lambda.ClientConfiguration) {
+  constructor(public functionName: string, options?: AWS.Lambda.ClientConfiguration) {
     this.lambda = new AWS.Lambda(options)
   }
 

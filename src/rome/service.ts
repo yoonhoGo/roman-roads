@@ -26,7 +26,7 @@ export default class Service implements Schema {
     this.provider = schema.provider
   }
 
-  run(action: string, context: any) {
+  run(action: string, context?: any) {
     const order = { action, context }
     return this.provider.invoke(order)
   }
