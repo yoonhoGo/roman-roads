@@ -1,13 +1,13 @@
-import Service from './service'
+import ServiceSchema from './service'
 
 interface Services {
-  [name: string]: Service
+  [name: string]: ServiceSchema
 }
 
 class Rome {
   services: Services = {}
 
-  createService(service: Service) {
+  createService(service: ServiceSchema) {
     const name = service.alias || service.name
     this.services[name] = service
   }
@@ -21,5 +21,5 @@ class Rome {
 export default Rome
 
 export {
-  Service
+  ServiceSchema
 }

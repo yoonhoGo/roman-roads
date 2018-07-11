@@ -9,7 +9,7 @@ interface Schema {
   [name: string]: any
 }
 
-export default class Service implements Schema {
+export default class ServiceSchema implements Schema {
   alias?: string
   name: string
   provider: Provider

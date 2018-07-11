@@ -1,6 +1,6 @@
 {
   "name": "roman-roads",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "yoonhoGo",
   "license": "MIT",
   "main": "dist/index.js",
